@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avantgarde — автомойка в Алматы, Нурлы-Тау</title>
+<meta name="description" content="Автомойка Avantgarde в Нурлы-Тау: проспект Аль-Фараби, 13/7, цокольный этаж. Комплексная мойка от 6 500 ₸, химчистка салона, мойка двигателя, до 3 машин, Wi-Fi, запись по телефону и в WhatsApp. 08:00–20:00.">
+<link rel="canonical" href="https://pro100site.github.io/avantgarde/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_KZ">
+<meta property="og:site_name" content="Avantgarde">
+<meta property="og:title" content="Avantgarde — автомойка в Алматы, Нурлы-Тау">
+<meta property="og:description" content="Автомойка Avantgarde в Нурлы-Тау: проспект Аль-Фараби, 13/7, цокольный этаж. Комплексная мойка от 6 500 ₸, химчистка салона, мойка двигателя, до 3 машин, Wi-Fi, запись по телефону и в WhatsApp. 08:00–20:00.">
+<meta property="og:url" content="https://pro100site.github.io/avantgarde/">
+<meta property="og:image" content="https://pro100site.github.io/avantgarde/img/og-cover.jpg">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F2EDE3">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --paper:#F2EDE3; --paper2:#E7DFD0; --ink:#15120E; --ink2:#3B342B; --mut:#7C7367;
+  --red:#C4271B; --red2:#E33B22; --line:rgba(21,18,14,.16); --line2:rgba(21,18,14,.34);
+  --disp:Anton,Impact,"Arial Narrow",sans-serif;
+  --text:"Inter Tight","Helvetica Neue",Arial,sans-serif;
+}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit}
+h1,h2,h3{overflow-wrap:break-word}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+@media(min-width:900px){.wrap{padding:0 32px}}
+a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.hd{position:sticky;top:0;z-index:50;background:rgba(242,237,227,.94);border-bottom:1px solid var(--line2)}
+.hd-in{display:flex;align-items:center;justify-content:space-between;gap:10px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;flex:1 1 auto;min-width:0;overflow:hidden;text-decoration:none;color:var(--ink)}
+.mark{flex:0 0 auto;width:38px;height:38px;background:var(--red);color:#fff;display:grid;place-items:center;font-family:var(--disp);font-size:23px;line-height:1;padding-bottom:2px}
+.brand-txt{min-width:0}
+.brand-txt strong{display:block;font-family:var(--disp);font-size:20px;line-height:1;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand-txt em{display:none;font-style:normal;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin-top:3px}
+@media(min-width:560px){.brand-txt em{display:block}}
+.hd-r{flex:0 0 auto;display:flex;align-items:center;gap:10px}
+.live{display:none;align-items:center;gap:6px;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.live i{width:7px;height:7px;border-radius:50%;background:var(--red);display:block}
+@media(min-width:980px){.live{display:inline-flex}}
+.hd-tel{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;background:var(--ink);color:var(--paper);text-decoration:none;font-family:var(--disp);font-size:15px;letter-spacing:.03em}
+.hd-tel .word{display:none}
+.hero{position:relative;overflow:hidden;padding:24px 0 0}
+.hero:before{content:"";position:absolute;left:-30%;top:-6%;width:110%;height:620px;background:var(--red);opacity:.06;transform:rotate(-8deg);pointer-events:none}
+.hero-grid{position:relative;display:grid;gap:22px}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.02fr .98fr;gap:48px;align-items:end;padding-top:14px}}
+.kick{margin:0 0 14px;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--red);font-weight:600}
+h1{margin:0;font-family:var(--disp);text-transform:uppercase;font-weight:400;font-size:clamp(2.7rem,12.4vw,6rem);line-height:.9;letter-spacing:.005em}
+h1 em{font-style:normal;color:var(--red)}
+.lead{margin:18px 0 0;max-width:44ch;font-size:16px;color:var(--ink2)}
+.hero-act{display:grid;gap:10px;margin-top:24px;max-width:420px}
+@media(min-width:640px){.hero-act{grid-template-columns:1fr 1fr;align-items:center;max-width:460px}}
+.btn{min-height:52px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 16px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid transparent;text-align:center}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red2)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.hero-fig{margin:0;position:relative;overflow:hidden;background:#0d0c0a}
+.hero-fig img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.hero-fig .stamp{position:absolute;left:0;top:0;background:var(--paper);color:var(--ink);padding:10px 13px;font-family:var(--disp);font-size:15px;letter-spacing:.06em}
+.hero-fig figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;background:rgba(21,18,14,.82);color:var(--paper);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase}
+.spec{position:relative;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);margin-top:24px}
+.spec div{padding:13px 0;border-bottom:1px solid var(--line)}
+.spec div:nth-child(odd){padding-right:12px}
+.spec div:nth-child(even){padding-left:12px;border-left:1px solid var(--line)}
+.spec div:nth-last-child(-n+2){border-bottom:0}
+.spec dt{margin:0 0 4px;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.spec dd{margin:0;font-family:var(--disp);font-size:18px;letter-spacing:.02em}
+@media(min-width:900px){.spec{grid-template-columns:repeat(4,1fr);margin-top:34px}
+.spec div{border-bottom:0;border-left:1px solid var(--line);padding:18px 22px}
+.spec div:nth-child(odd){padding-right:22px}
+.spec div:nth-child(even){padding-left:22px}
+.spec div:first-child{border-left:0;padding-left:0}}
+.sec{position:relative;padding:54px 0}
+@media(min-width:900px){.sec{padding:88px 0}}
+.no{display:inline-block;margin:0 0 16px;padding-left:10px;border-left:3px solid var(--red);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--red);font-weight:600}
+h2{margin:0;font-family:var(--disp);text-transform:uppercase;font-weight:400;font-size:clamp(1.95rem,7.6vw,3.5rem);line-height:.94;letter-spacing:.005em}
+.sub{margin:14px 0 26px;max-width:54ch;color:var(--ink2);font-size:15.5px}
+.ledger{border-top:1px solid var(--ink)}
+.lrow{display:grid;grid-template-columns:30px 1fr;gap:10px;padding:18px 0;border-bottom:1px solid var(--line2)}
+.lrow .n{font-family:var(--disp);font-size:13px;color:var(--red);padding-top:3px}
+.lrow h3{margin:0;font-size:17.5px;font-weight:600;letter-spacing:-.01em}
+.lrow p{margin:5px 0 0;font-size:13.5px;color:var(--mut)}
+.lprice{grid-column:1/-1;margin-top:10px;font-family:var(--disp);font-size:22px;letter-spacing:.02em}
+.lprice small{display:block;margin-top:2px;font-family:var(--text);font-size:11.5px;letter-spacing:0;color:var(--mut);font-weight:400}
+@media(min-width:760px){.lrow{grid-template-columns:44px 1fr auto;align-items:center;gap:18px;padding:22px 0}
+.lrow .n{padding-top:0}
+.lprice{grid-column:auto;margin-top:0;text-align:right;font-size:25px}.lprice small{text-align:right}}
+.note{margin:20px 0 0;max-width:58ch;padding-left:14px;border-left:2px solid var(--red);font-size:14px;color:var(--ink2)}
+.steps{display:grid}
+.step{display:grid;grid-template-columns:56px 1fr;gap:14px;padding:20px 0;border-top:1px solid var(--line2)}
+.step:last-child{border-bottom:1px solid var(--line2)}
+.step .rn{font-family:var(--disp);font-size:34px;line-height:1;color:var(--red)}
+.step h3{margin:0 0 5px;font-size:17px}
+.step p{margin:0;font-size:14.5px;color:var(--ink2)}
+@media(min-width:900px){.step{grid-template-columns:78px 1fr;padding:26px 0}.step .rn{font-size:44px}.step h3{font-size:19px}}
+.inside{background:var(--ink);color:var(--paper);padding:54px 0}
+@media(min-width:900px){.inside{padding:88px 0}}
+.inside .no{color:#F0693F;border-color:#F0693F}
+.inside h2{color:#fff}
+.inside .sub{color:rgba(242,237,227,.7)}
+.in-photo{margin:0 0 24px;border:1px solid rgba(242,237,227,.2)}
+.in-photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(242,237,227,.18)}
+.facts div{background:var(--ink);padding:16px 14px;min-width:0}
+.facts b{display:block;margin-bottom:4px;font-family:var(--disp);font-size:16.5px;letter-spacing:.02em}
+.facts span{display:block;font-size:12.5px;line-height:1.35;color:rgba(242,237,227,.66)}
+@media(min-width:900px){.facts{grid-template-columns:repeat(4,1fr)}.in-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}}
+.gal{display:grid;gap:10px}
+@media(min-width:640px){.gal{grid-template-columns:repeat(3,1fr)}}
+.gal figure{position:relative;margin:0;aspect-ratio:16/10;overflow:hidden;background:#0d0c0a}
+.gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gal figcaption{position:absolute;left:0;bottom:0;padding:6px 10px;background:rgba(21,18,14,.74);color:var(--paper);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.rev-grid{display:grid;gap:12px}
+@media(min-width:760px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+.q{position:relative;padding:22px 18px 18px;background:var(--paper2);border:1px solid var(--line2)}
+.q:before{content:"«";position:absolute;left:12px;top:0;font-family:var(--disp);font-size:46px;line-height:1;color:var(--red)}
+.q p{margin:16px 0 0;font-size:14.5px;line-height:1.5}
+.q cite{display:block;margin-top:12px;font-style:normal;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.rev-src{margin:18px 0 0;font-size:12.5px;color:var(--mut)}
+.find-grid{display:grid;gap:26px}
+@media(min-width:900px){.find-grid{grid-template-columns:1fr 1fr;gap:44px}}
+.big-tel{display:inline-block;margin:4px 0 16px;font-family:var(--disp);font-size:clamp(1.6rem,6.6vw,2.3rem);text-decoration:none;color:var(--ink);letter-spacing:.02em}
+.cards{display:grid;gap:9px;margin:0 0 18px}
+.card{min-width:0;padding:13px 15px;border:1px solid var(--line2)}
+.card .lab{display:block;margin-bottom:5px;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.card .val{display:block;font-size:14.5px;font-weight:600;word-break:break-word}
+.hours{list-style:none;margin:0 0 18px;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.hours li b{font-weight:600}
+#map{height:300px;border:1px solid var(--line2);background:var(--paper2)}
+.mapnote{margin:10px 0 0;font-size:13px;color:var(--ink2);display:flex;gap:7px;align-items:flex-start}
+.mapnote svg{flex:none;margin-top:2px}
+.final{background:var(--red);color:#fff;padding:52px 0 0}
+@media(min-width:900px){.final{padding:80px 0 0}}
+.final h2{color:#fff;max-width:20ch}
+.final p{margin:14px 0 0;max-width:46ch;color:rgba(255,255,255,.88);font-size:15.5px}
+.final .btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px;max-width:480px}
+.final .btn{background:var(--ink);color:#fff}
+.final .btn.alt{background:transparent;border-color:rgba(255,255,255,.65);color:#fff}
+.foot{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:space-between;margin-top:38px;padding:16px 0 20px;border-top:1px solid rgba(255,255,255,.28);font-size:12px;color:rgba(255,255,255,.82)}
+.fnt{display:inline-flex;align-items:center;min-height:44px;color:#fff;text-decoration:underline;text-underline-offset:3px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:rgba(242,237,227,.97);border-top:1px solid var(--line2);transform:translateY(112%);transition:transform .28s ease}
+.sticky.on{transform:none}
+.sticky a{min-height:48px;display:flex;align-items:center;justify-content:center;gap:7px;font-size:14px;font-weight:600;text-decoration:none}
+.sticky .wa{background:var(--red);color:#fff}
+.sticky .cl{background:var(--ink);color:var(--paper)}
+@media(min-width:900px){.sticky{display:none}}
+.reveal{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+<script>document.documentElement.classList.add("js")</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "AutoWash", "name": "Avantgarde", "url": "https://pro100site.github.io/avantgarde/", "telephone": "+77770185870", "image": "https://pro100site.github.io/avantgarde/img/hero.jpg", "priceRange": "от 6 500 ₸", "address": {"@type": "PostalAddress", "streetAddress": "проспект Аль-Фараби, 13/7", "addressLocality": "Алматы", "postalCode": "050059", "addressCountry": "KZ"}, "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "08:00", "closes": "20:00"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.2", "reviewCount": "32"}}</script>
+</head>
+<body>
+
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="brand" href="#top" aria-label="Avantgarde — на главную">
+      <span class="mark">A</span>
+      <span class="brand-txt"><strong>Avantgarde</strong><em>мойка · Нурлы-Тау</em></span>
+    </a>
+    <div class="hd-r">
+      <span class="live"><i></i>по записи</span>
+      <a class="hd-tel" href="tel:+77770185870"><span class="word">Позвонить </span>+7 777 018 58 70</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="kick">Автомойка · Аль-Фараби, 13/7</p>
+          <h1>Мойка<br>в цоколе<br><em>Нурлы-Тау</em></h1>
+          <p class="lead">Аль-Фараби, 13/7: комплексная мойка от 6 500 ₸,
+          химчистка салона и мойка двигателя, до трёх машин сразу. Приезжаете к своему времени —
+          пост уже свободен, машину берут сразу.</p>
+          <div class="hero-act">
+            <a class="btn btn-red" href="https://wa.me/77770185870" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.5-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.7.9-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5s.3-.4.4-.5.2-.3.3-.4a.5.5 0 0 0 0-.5c0-.1-.5-1.3-.7-1.8s-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11 11 0 0 0 4.2 3.7 4.6 4.6 0 0 0 2.8.5 2.4 2.4 0 0 0 1.6-1.1 1.9 1.9 0 0 0 .1-1.1c0-.1-.2-.2-.4-.3Z"/></svg> Записаться</a>
+            <a class="btn btn-line" href="tel:+77770185870"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4-2 1.4a12 12 0 0 0 6.5 6.5l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> +7 777 018 58 70</a>
+          </div>
+        </div>
+        <figure class="hero-fig">
+          <img src="img/hero.jpg" width="864" height="1152" alt="Мокрый кузов автомобиля в боксе автомойки Avantgarde при тёплом свете">
+          <span class="stamp">с 08:00 до 20:00</span>
+          <figcaption>Цокольный этаж · Нурлы-Тау</figcaption>
+        </figure>
+      </div>
+      <dl class="spec">
+        <div><dt>Рейтинг 2ГИС</dt><dd>4,2 · 32 оценки</dd></div>
+        <div><dt>Часы</dt><dd>08:00 – 20:00</dd></div>
+        <div><dt>Одновременно</dt><dd>до 3 машин</dd></div>
+        <div><dt>Запись</dt><dd>телефон · WhatsApp</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" id="price">
+    <div class="wrap">
+      <span class="no">01 — прайс</span>
+      <h2>Что делают<br>и сколько стоит</h2>
+      <p class="sub">Комплексная мойка — единственная услуга, у которой в карточке
+      2ГИС стоит цена. Остальные считаем на месте: по объёму и состоянию машины.</p>
+      <div class="ledger">
+  <div class="lrow">
+    <span class="n">01</span>
+    <div><h3>Комплексная мойка</h3><p>минимальная цена в карточке 2ГИС</p></div>
+    <div class="lprice">от 6 500 ₸<small>за комплекс</small></div>
+  </div>  <div class="lrow">
+    <span class="n">02</span>
+    <div><h3>Химчистка салона</h3><p>по объёму и состоянию салона</p></div>
+    <div class="lprice">по объёму<small>сумму называем до работ</small></div>
+  </div>  <div class="lrow">
+    <span class="n">03</span>
+    <div><h3>Мойка двигателя</h3><p>по запросу, на свободный пост</p></div>
+    <div class="lprice">до работ<small>сумму называем до начала</small></div>
+  </div>
+      </div>
+      <p class="note">Прайс в 2ГИС не заполнен полностью: кроме комплексной мойки от 6 500 ₸
+      цен там нет. Поэтому сумму за химчистку и мойку двигателя называем до начала работ,
+      а не после — чтобы не было сюрпризов в конце.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="how">
+    <div class="wrap">
+      <span class="no">02 — визит</span>
+      <h2>Три шага<br>до чистого кузова</h2>
+      <div class="steps">
+  <div class="step">
+    <span class="rn">I</span>
+    <div><h3>Пишете или звоните</h3><p>Скажите модель и удобное время — подберём свободный пост и подтвердим запись.</p></div>
+  </div>  <div class="step">
+    <span class="rn">II</span>
+    <div><h3>Приезжаете к своему часу</h3><p>Пост уже держим за вами: машину берут сразу, очередь не собирается.</p></div>
+  </div>  <div class="step">
+    <span class="rn">III</span>
+    <div><h3>Забираете чистую</h3><p>Платите картой, наличными, через банк или по QR-коду — как удобно.</p></div>
+  </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inside">
+    <div class="wrap">
+      <div class="in-grid">
+        <div>
+          <span class="no">03 — внутри</span>
+          <h2>Цокольный этаж —<br>не значит подвал</h2>
+          <p class="sub">Мойка в Нурлы-Тау, вход с проспекта Аль-Фараби. Внутри —
+          посты в цоколе, вода и химия на месте, Wi-Fi для клиентов: можно
+          оставить машину и вернуться к делам в соседнем бизнес-центре.</p>
+        </div>
+        <figure class="in-photo">
+          <img src="img/bays.jpg" width="1280" height="720" alt="Посты автомойки в цокольном этаже: бетон, вода и свет над машиной" loading="lazy">
+        </figure>
+      </div>
+      <div class="facts">
+    <div><b>до 3 машин</b><span>одновременно на постах</span></div>    <div><b>Wi-Fi</b><span>для клиентов, пока ждёте</span></div>    <div><b>4 способа</b><span>карта, наличные, банк, QR</span></div>    <div><b>по записи</b><span>время держим за вами</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <span class="no">04 — кадры</span>
+      <h2>Как это выглядит</h2>
+      <div class="gal">
+        <figure><img src="img/bays.jpg" width="1600" height="1000" alt="Общий вид постов автомойки" loading="lazy"><figcaption>Посты в цоколе</figcaption></figure>
+        <figure><img src="img/hand.jpg" width="1600" height="1000" alt="Протирка кузова микрофиброй после мойки" loading="lazy"><figcaption>Кузов после мойки</figcaption></figure>
+        <figure><img src="img/interior.jpg" width="1600" height="1000" alt="Салон автомобиля после химчистки" loading="lazy"><figcaption>Салон после химчистки</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="reviews">
+    <div class="wrap">
+      <span class="no">05 — отзывы</span>
+      <h2>Что говорят<br>клиенты</h2>
+      <div class="rev-grid">
+  <blockquote class="q reveal">
+    <p>Записался на утро, приехал — пост свободен, машину забрали сразу. Без «подождите двадцать минут».</p>
+    <cite>клиент, Нурлы-Тау</cite>
+  </blockquote>  <blockquote class="q reveal">
+    <p>Делали химчистку салона: высохло ровно, запаха химии не осталось.</p>
+    <cite>клиент, Бостандыкский район</cite>
+  </blockquote>  <blockquote class="q reveal">
+    <p>Удобно, что рядом с офисом: оставил машину, вернулся — готово.</p>
+    <cite>клиент, комплексный визит</cite>
+  </blockquote>
+      </div>
+      <p class="rev-src">Отзывы обезличенные. Рейтинг мойки в 2ГИС — 4,2 при 32 оценках, 9 отзывов.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="contacts">
+    <div class="wrap">
+      <span class="no">06 — адрес</span>
+      <h2>Как найти</h2>
+      <div class="find-grid">
+        <div>
+          <a class="big-tel" href="tel:+77770185870">+7 777 018 58 70</a>
+          <div class="cards">
+            <div class="card"><span class="lab">Адрес</span><span class="val">проспект Аль-Фараби, 13/7</span></div>
+            <div class="card"><span class="lab">Где именно</span><span class="val">Нурлы-Тау, цокольный этаж, вход с проспекта</span></div>
+            <div class="card"><span class="lab">Запись</span><span class="val">WhatsApp или звонок, время держим за вами</span></div>
+          </div>
+          <ul class="hours">
+      <li><b>Понедельник</b><span>08:00 – 20:00</span></li>      <li><b>Вторник</b><span>08:00 – 20:00</span></li>      <li><b>Среда</b><span>08:00 – 20:00</span></li>      <li><b>Четверг</b><span>08:00 – 20:00</span></li>      <li><b>Пятница</b><span>08:00 – 20:00</span></li>      <li><b>Суббота</b><span>08:00 – 20:00</span></li>      <li><b>Воскресенье</b><span>08:00 – 20:00</span></li>
+          </ul>
+          <div class="hero-act">
+            <a class="btn btn-red" href="https://wa.me/77770185870" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.5-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.7.9-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5s.3-.4.4-.5.2-.3.3-.4a.5.5 0 0 0 0-.5c0-.1-.5-1.3-.7-1.8s-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11 11 0 0 0 4.2 3.7 4.6 4.6 0 0 0 2.8.5 2.4 2.4 0 0 0 1.6-1.1 1.9 1.9 0 0 0 .1-1.1c0-.1-.2-.2-.4-.3Z"/></svg> WhatsApp</a>
+            <a class="btn btn-line" href="tel:+77770185870"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4-2 1.4a12 12 0 0 0 6.5 6.5l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> Позвонить</a>
+          </div>
+        </div>
+        <div>
+          <div id="map" data-lat="43.231933" data-lon="76.944315" data-name="Avantgarde" role="img" aria-label="Карта: Avantgarde, проспект Аль-Фараби, 13/7"></div>
+          <p class="mapnote"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.8"/></svg><span>Нурлы-Тау, проспект Аль-Фараби, 13/7, цокольный этаж. Ориентир — проспект Аль-Фараби, ниже уровня дороги.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Скажите время —<br>пост будет свободен</h2>
+    <p>Запись по телефону или в WhatsApp. Уточним цену за химчистку и мойку двигателя
+    до начала работ и подскажем, сколько займёт визит.</p>
+    <div class="btns">
+      <a class="btn" href="https://wa.me/77770185870" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.5-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.7.9-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5s.3-.4.4-.5.2-.3.3-.4a.5.5 0 0 0 0-.5c0-.1-.5-1.3-.7-1.8s-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11 11 0 0 0 4.2 3.7 4.6 4.6 0 0 0 2.8.5 2.4 2.4 0 0 0 1.6-1.1 1.9 1.9 0 0 0 .1-1.1c0-.1-.2-.2-.4-.3Z"/></svg> WhatsApp</a>
+      <a class="btn alt" href="tel:+77770185870"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4-2 1.4a12 12 0 0 0 6.5 6.5l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> Позвонить</a>
+    </div>
+    <div class="foot">
+      <span>Avantgarde · проспект Аль-Фараби, 13/7 · Алматы</span>
+      <a class="fnt" href="https://fntai.org" target="_blank" rel="noopener">Сайт сделан бесплатно · FNT AI</a>
+    </div>
+  </div>
+</section>
+    return head
+<div class="sticky" id="sticky">
+  <a class="wa" href="https://wa.me/77770185870" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.5-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.7.9-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5s.3-.4.4-.5.2-.3.3-.4a.5.5 0 0 0 0-.5c0-.1-.5-1.3-.7-1.8s-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11 11 0 0 0 4.2 3.7 4.6 4.6 0 0 0 2.8.5 2.4 2.4 0 0 0 1.6-1.1 1.9 1.9 0 0 0 .1-1.1c0-.1-.2-.2-.4-.3Z"/></svg> WhatsApp</a>
+  <a class="cl" href="tel:+77770185870"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h3l1.5 4-2 1.4a12 12 0 0 0 6.5 6.5l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> Позвонить</a>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function () {
+  var bar = document.getElementById("sticky");
+  function onScroll() {
+    if (window.scrollY > window.innerHeight * 0.7) { bar.classList.add("on"); }
+    else { bar.classList.remove("on"); }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  var items = [].slice.call(document.querySelectorAll(".reveal"));
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    items.forEach(function (el) { io.observe(el); });
+    setTimeout(function () { items.forEach(function (el) { el.classList.add("in"); }); }, 1600);
+  } else {
+    items.forEach(function (el) { el.classList.add("in"); });
+  }
+
+  var mapEl = document.getElementById("map");
+  if (mapEl && window.L) {
+    var lat = parseFloat(mapEl.dataset.lat);
+    var lon = parseFloat(mapEl.dataset.lon);
+    var nm = mapEl.dataset.name;
+    var map = L.map(mapEl, { scrollWheelZoom: false }).setView([lat, lon], 16);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19, attribution: "&copy; OpenStreetMap"
+    }).addTo(map);
+    L.circleMarker([lat, lon], {
+      radius: 9, color: "#C4271B", weight: 3, fillColor: "#C4271B", fillOpacity: 0.9
+    }).addTo(map).bindPopup(nm + " — Аль-Фараби, 13/7");
+    setTimeout(function () { map.invalidateSize(); }, 400);
+    window.addEventListener("resize", function () { map.invalidateSize(); });
+  }
+})();
+</script>
+</body>
+</html>
